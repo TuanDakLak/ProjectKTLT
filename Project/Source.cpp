@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 using namespace std;
 struct ASM {
@@ -42,12 +42,13 @@ void addclass(Class*& a)
     Class* tmp = createclass();
 
 }
+// Thêm hàm tạo năm học mới
 int main()
 {
     year a;
     cout << "Nhap khoang thoi gian nam hoc: ";
     cin >> a.yeartime;
-
+    cout << "da xong \n";
 
     return 0;
 }

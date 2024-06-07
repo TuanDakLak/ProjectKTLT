@@ -42,6 +42,14 @@ void addclass(Class*& a)
     Class* tmp = createclass();
 
 }
+void printClass(Class* a)
+{
+    while (a != NULL)
+    {
+        cout << a->ten << endl;
+        a = a->next;
+    }
+}
 // Thêm hàm tạo năm học mới
 int main()
 {

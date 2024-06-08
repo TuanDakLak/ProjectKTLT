@@ -77,10 +77,13 @@ struct Semester {
     ListCourses list;
 };
 
-void addStudent(ListStudent& list, Student* x);
+Semester createSemester();
+Course* CreateCourse();
+void addCourseToSemester(Semester& hk);
 void viewOfCourse(ListCourses list);
 
 void updateCourseIf(ListCourses& List);
+void addStudentToCourse(Student& a, Course* x);
 
 #endif // !1
 

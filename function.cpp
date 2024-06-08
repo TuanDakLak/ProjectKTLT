@@ -1,4 +1,42 @@
 #include "function.h"
+Semester createSemester() {
+	Semester tmp;
+	cout << "Hoc ki bao nhieu (1,2 hay 3) : "; cin >> tmp.semester;
+	cout << "Nam hoc :"; cin >> tmp.startDate.nam; tmp.endDate.nam = tmp.startDate.nam;
+	cout << "Ngay bat dau : ";
+	cout << "\t\t\tNgay : ";
+	cin >> tmp.startDate.ngay;
+	cout << "\t\t\tThang : ";
+	cin >> tmp.startDate.thang;
+	cout << "Ngay ket thuc : ";
+	cout << "\t\t\tNgay : ";
+	cin >> tmp.endDate.ngay;
+	cout << "\t\t\tThang : ";
+	cin >> tmp.endDate.thang;
+	return tmp;
+}
+Course* CreateCourse() {
+	Course* p = new Course();
+	cout << "ID mon hoc : ";
+	getline(cin, p->id);
+	cout << "Ten mon hoc : ";
+	getline(cin, p->courseName);
+	cout << "Ten giao vien : ";
+	getline(cin, p->teacherName);
+	cout << "So tin chi mon hoc do : ";
+	cin >> p->credits;
+	cout << "So luong sinh vien (toi da 50) : ";
+	cin >> p->max;
+	while (p->max < 0 || p->max>50) {
+		cout << "So luong sinh vien da qua gioi han , vui long nhap lai!!";
+		cout << "So luong sinh vien (toi da 50) : ";
+		cin >> p->max;
+	}
+
+}
+void addCourseToSemester(Semester& hk) {
+	Course* monHoc =
+}
 void addStudent(ListStudent& list, Student* x) {
 	if (x == NULL) return;
 	if (list.head == NULL) {
@@ -32,7 +70,7 @@ void updateCourseIf(ListCourses& List) {
 	string Id;
 	cout << "Nhap ma mon hoc de cap nhat thong tin : ";
 	getline(cin, Id);
-	Course* p=List.head;
+	Course* p = List.head;
 	while (p != NULL) {
 		if (p->id == Id) {
 			cout << "Ban muon cap nhat thong tin nao " << endl;

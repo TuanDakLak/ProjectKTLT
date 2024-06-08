@@ -23,6 +23,9 @@ struct Course {
     string courseName;
     string teacherName;
     int max = 50;
+    int credits;
+    int dayOfWeek;
+    string session;
     Course* prev;
     Course* next;
 };
@@ -30,7 +33,7 @@ struct ListCourses {
     Course* head;
     Course* tail;
     Date startDate, endDate;
-    int size=0;
+    int size = 0;
 };
 struct ListUser {
     User* head;
@@ -65,13 +68,15 @@ struct ListClasses {
     Class* tail;
     int size;
 };
-struct Semester {
-    int semester;
-    Date startDate, endDate;
-};
 struct Year {
     int From, To;
 };
+struct Semester {
+    int semester;
+    Date startDate, endDate;
+    ListCourses list;
+};
+
 void addStudent(ListStudent& list, Student* x);
 void viewOfCourse(ListCourses list);
 

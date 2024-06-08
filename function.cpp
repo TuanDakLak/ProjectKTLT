@@ -32,10 +32,31 @@ Course* CreateCourse() {
 		cout << "So luong sinh vien (toi da 50) : ";
 		cin >> p->max;
 	}
-
+	cout << "THOI GIAN BUOI HOC DIEN RA :" << endl;
+	cout << "\t\t\tNGAY TRONG TUAN:               THOI GIAN:" << endl;
+	cout << "\t\t\tchon 2: Thu hai                 S1: 07:30\n";
+	cout << "\t\t\tchon 3: Thu ba                  S2: 09:30\n";
+	cout << "\t\t\tchon 4: Thu tu                  S3: 12:30\n";
+	cout << "\t\t\tchon 5: Thu nam                 S4: 15:30\n";
+	cout << "\t\t\tchon 6: Thu sau\n";
+	cout << "\t\t\tchon 7: Thu bay\n";
+	cout << "Hoc vao thu : "; cin >> p->dayOfWeek;
+	cout << "Hoc vao luc : "; getline(cin, p->session);
+	return p;
 }
 void addCourseToSemester(Semester& hk) {
-	Course* monHoc =
+	Course* monHoc = CreateCourse();
+	if (monHoc == NULL) return;
+	if (hk.list.head == NULL) {
+		hk.list.head = hk.list.tail = monHoc;
+		return;
+	}
+	Course* p = hk.list.head;
+	while (1) {
+		if (p->next == NULL) break;
+		p = p->next;
+	}
+	p->next = monHoc;
 }
 void addStudent(ListStudent& list, Student* x) {
 	if (x == NULL) return;
@@ -56,11 +77,23 @@ void viewOfCourse(ListCourses list) {
 	int i = 1;
 	while (list.head != NULL) {
 		cout << "Mon hoc thu " << i << endl;
-		cout << "\t\tNgay bat dau mon hoc : " << list.startDate.ngay << "/" << list.startDate.thang << "/" << list.startDate.nam << endl;
-		cout << "\t\tNgay ket thuc mon hoc : " << list.endDate.ngay << "/" << list.endDate.thang << "/" << list.endDate.nam << endl;
 		cout << "\t\tTen mon hoc : " << list.head->courseName << endl;
 		cout << "\t\tMa mon hoc :" << list.head->id << endl;
-		cout << "\t\tTen giao vien day mon hoc do :" << list.head->teacherName << endl;
+		cout << "\t\tTen giao vien day mon hoc do : " << list.head->teacherName << endl;
+		cout << "\t\tSo tin chi : " << list.head->credits << endl;
+		cout << "\t\tHoc vao thu " << list.head->dayOfWeek;
+		if (list.head->session == "S1") {
+			cout << " 07:30\n";
+		}
+		else if (list.head->session == "S2") {
+			cout << " 09:30\n";
+		}
+		else if (list.head->session == "S3") {
+			cout << " 12:30\n";
+		}
+		else if (list.head->session == "S4") {
+			cout << " 15:30\n";
+		}
 		i++;
 		list.head = list.head->next;
 	}

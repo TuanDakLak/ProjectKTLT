@@ -58,16 +58,7 @@ void addCourseToSemester(Semester& hk) {
 	}
 	p->next = monHoc;
 }
-void addStudent(ListStudent& list, Student* x) {
-	if (x == NULL) return;
-	if (list.head == NULL) {
-		list.head = x;
-		list.tail = x;
-		return;
-	}
-	x->next = list.head;
-	list.head = x;
-}
+
 
 void viewOfCourse(ListCourses list) {
 	if (list.head == NULL) {
@@ -126,6 +117,22 @@ void updateCourseIf(ListCourses& List) {
 
 }
 
+void addStudentToCourse(Student& a, Course* x) {
+	if (x == NULL) {
+		cout << "Mon hoc ko ton tai " << endl;
+		return;
+	}
+	if (a.enrolledCourses.head == NULL) {
+		a.enrolledCourses.head = a.enrolledCourses.tail = x;
+		return;
+	}
+	Course* p = a.enrolledCourses.head;
+	while (1) {
+		if (p->next == NULL) break;
+		p = p->next;
+	}
+	p->next = x;
+}
 
 
 

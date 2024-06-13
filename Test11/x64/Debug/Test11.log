@@ -1,0 +1,33 @@
+﻿  menu.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\sal.h(2361,1): error C2144: syntax error: 'int' should be preceded by ';'
+  (compiling source file 'menu.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\sal.h(2361,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'menu.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+  Stafff.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\sal.h(2361,1): error C2144: syntax error: 'int' should be preceded by ';'
+  (compiling source file 'Stafff.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\sal.h(2361,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'Stafff.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+  student.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\sal.h(2361,1): error C2144: syntax error: 'int' should be preceded by ';'
+  (compiling source file 'student.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\sal.h(2361,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'student.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+  main.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\sal.h(2361,1): error C2144: syntax error: 'int' should be preceded by ';'
+  (compiling source file 'main.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\sal.h(2361,8): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+  (compiling source file 'main.cpp')
+  
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.38.33130\include\filesystem(12): warning STL4038: The contents of <filesystem> are available only with C++17 or later.
+  Generating Code...
